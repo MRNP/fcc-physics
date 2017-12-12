@@ -201,8 +201,9 @@ int main(int argc, char** argv) {
     store.clearCollections();
     delete hepmcevt;
   }
-  Pythia8::SigmaTotal xsec;
-  double sigma = xsec.sigmaTot();
+  //Pythia8::SigmaTotal xsec;
+  //double sigma = xsec.sigmaTot();
+  double sigma = pythia.info.sigmaGen();
     std::cout << " Cross section is " << std::scientific << std::setprecision(5)
          << sigma <<std::endl;
   std::ofstream logging;
